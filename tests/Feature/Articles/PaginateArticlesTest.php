@@ -16,7 +16,7 @@ class PaginateArticlesTest extends TestCase
     {
        $articles = Article::factory()->times(10)->create();
        $url = route('api.v1.articles.index',['page[size]' =>2,'page[number]'=> 3]);
-       $response = $this->getJson($url);
+       $response = $this->->jsonApi()->get($url);
        $response->assertJsonCount(2,'data')
        ->assertDontSee($articles[0]->title)
        ->assertDontSee($articles[1]->title)

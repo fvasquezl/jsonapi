@@ -5,6 +5,7 @@ namespace Tests\Feature\Articles;
 use App\Models\Article;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use function Symfony\Component\Translation\t;
 
 class ListArticleTest extends TestCase
 {
@@ -16,7 +17,7 @@ class ListArticleTest extends TestCase
     {
         $article = Article::factory()->create();
 
-        $response = $this->getJson(route('api.v1.articles.show',$article));
+        $response = $this->jsonApi()->get(route('api.v1.articles.show',$article));
         $response->assertExactJson([
             'data' => [
                 'type' => 'articles',
@@ -38,7 +39,7 @@ class ListArticleTest extends TestCase
     {
         $article = Article::factory()->times(3)->create();
 
-        $response = $this->getJson(route('api.v1.articles.index'));
+        $response = $this->jsonApi()->get(route('api.v1.articles.index'));
         $response->assertJsonFragment([
             'data' => [
                 [
