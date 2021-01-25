@@ -121,6 +121,7 @@
       <path value="$PROJECT_DIR$/vendor/neomerx/json-api" />
       <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
       <path value="$PROJECT_DIR$/vendor/cloudcreativity/json-api-testing" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

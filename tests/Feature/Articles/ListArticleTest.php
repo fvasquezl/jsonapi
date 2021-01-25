@@ -5,11 +5,9 @@ namespace Tests\Feature\Articles;
 use App\Models\Article;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
-use function Symfony\Component\Translation\t;
 
 class ListArticleTest extends TestCase
 {
-
     use RefreshDatabase;
 
     /** @test */
@@ -17,7 +15,7 @@ class ListArticleTest extends TestCase
     {
         $article = Article::factory()->create();
 
-        $response = $this->jsonApi()->get(route('api.v1.articles.show',$article));
+        $response = $this->jsonApi()->get(route('api.v1.articles.read', $article));
         $response->assertExactJson([
             'data' => [
                 'type' => 'articles',
@@ -26,9 +24,11 @@ class ListArticleTest extends TestCase
                     'title' => $article->title,
                     'slug' => $article->slug,
                     'content' => $article->content,
+                    'createdAt' => $article->created_at,
+                    'updatedAt' => $article->updated_at,
                 ],
-                'links' =>[
-                    'self' => route('api.v1.articles.show',$article)
+                'links' => [
+                    'self' => route('api.v1.articles.read', $article)
                 ]
             ]
         ]);
@@ -49,9 +49,11 @@ class ListArticleTest extends TestCase
                         'title' => $article[0]->title,
                         'slug' => $article[0]->slug,
                         'content' => $article[0]->content,
+                        'createdAt' => $article[0]->created_at,
+                        'updatedAt' => $article[0]->updated_at,
                     ],
-                    'links' =>[
-                        'self' => route('api.v1.articles.show',$article[0])
+                    'links' => [
+                        'self' => route('api.v1.articles.read', $article[0])
                     ]
                 ],
                 [
@@ -61,9 +63,11 @@ class ListArticleTest extends TestCase
                         'title' => $article[1]->title,
                         'slug' => $article[1]->slug,
                         'content' => $article[1]->content,
+                        'createdAt' => $article[1]->created_at,
+                        'updatedAt' => $article[1]->updated_at,
                     ],
-                    'links' =>[
-                        'self' => route('api.v1.articles.show',$article[1])
+                    'links' => [
+                        'self' => route('api.v1.articles.read', $article[1])
                     ]
                 ],
                 [
@@ -73,9 +77,11 @@ class ListArticleTest extends TestCase
                         'title' => $article[2]->title,
                         'slug' => $article[2]->slug,
                         'content' => $article[2]->content,
+                        'createdAt' => $article[2]->created_at,
+                        'updatedAt' => $article[2]->updated_at,
                     ],
-                    'links' =>[
-                        'self' => route('api.v1.articles.show',$article[2])
+                    'links' => [
+                        'self' => route('api.v1.articles.read', $article[2])
                     ]
                 ],
             ]

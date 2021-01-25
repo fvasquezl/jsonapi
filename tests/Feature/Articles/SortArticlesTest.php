@@ -8,7 +8,6 @@ use Tests\TestCase;
 
 class SortArticlesTest extends TestCase
 {
-
     use RefreshDatabase;
 
     /** @test */
@@ -19,7 +18,7 @@ class SortArticlesTest extends TestCase
         Article::factory()->create(['title' => 'B Title']);
 
         $url = route('api.v1.articles.index', ['sort' => 'title']);
-        $this->->jsonApi()->get($url)->assertSeeInOrder([
+        $this->jsonApi()->get($url)->assertSeeInOrder([
             'A Title',
             'B Title',
             'C Title',
@@ -34,7 +33,7 @@ class SortArticlesTest extends TestCase
         Article::factory()->create(['title' => 'B Title']);
 
         $url = route('api.v1.articles.index', ['sort' => '-title']);
-        $this->->jsonApi()->get($url)->assertSeeInOrder([
+        $this->jsonApi()->get($url)->assertSeeInOrder([
             'C Title',
             'B Title',
             'A Title',
@@ -61,15 +60,15 @@ class SortArticlesTest extends TestCase
 //            dump($db->sql);
 //        });
 
-        $url = route('api.v1.articles.index').'?sort=title,-content';
-        $this->->jsonApi()->get($url)->assertSeeInOrder([
+        $url = route('api.v1.articles.index') . '?sort=title,-content';
+        $this->jsonApi()->get($url)->assertSeeInOrder([
             'A Title',
             'B Title',
             'C Title',
         ]);
 
-        $url = route('api.v1.articles.index').'?sort=-content,title';
-        $this->->jsonApi()->get($url)->assertSeeInOrder([
+        $url = route('api.v1.articles.index') . '?sort=-content,title';
+        $this->jsonApi()->get($url)->assertSeeInOrder([
             'D Content',
             'C Content',
             'B Content',
@@ -81,7 +80,7 @@ class SortArticlesTest extends TestCase
     {
         Article::factory()->times(3)->create();
 
-        $url = route('api.v1.articles.index').'?sort=unknown';
-        $this->->jsonApi()->get($url)->assertStatus(400);
+        $url = route('api.v1.articles.index') . '?sort=unknown';
+        $this->jsonApi()->get($url)->assertStatus(400);
     }
 }

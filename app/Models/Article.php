@@ -7,12 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
-
 class Article extends Model
 {
     use HasFactory;
-
-    public  $allowedSorts = ['title', 'content'];
 
     /**
      * The attributes that aren't mass assignable.
@@ -32,7 +29,6 @@ class Article extends Model
         'user_id' => 'integer',
     ];
 
-
     public function category()
     {
         return $this->belongsTo(\App\Models\Category::class);
@@ -43,32 +39,31 @@ class Article extends Model
         return $this->belongsTo(\App\Models\User::class);
     }
 
-    public function scopeTitle(Builder $query ,$value)
+    public function scopeTitle(Builder $query, $value)
     {
         $query->where('title', 'LIKE', "%{$value}%");
     }
 
-    public function scopeContent(Builder $query ,$value)
+    public function scopeContent(Builder $query, $value)
     {
         $query->where('content', 'LIKE', "%{$value}%");
     }
 
-    public function scopeYear(Builder $query ,$value)
+    public function scopeYear(Builder $query, $value)
     {
-        $query->whereYear('created_at',$value);
+        $query->whereYear('created_at', $value);
     }
 
-    public function scopeMonth(Builder $query ,$value)
+    public function scopeMonth(Builder $query, $value)
     {
-        $query->whereMonth('created_at',$value);
+        $query->whereMonth('created_at', $value);
     }
 
-    public function scopeSearch(Builder $query ,$values)
+    public function scopeSearch(Builder $query, $values)
     {
-        foreach(Str::of($values)->explode(' ') as $value){
-            $query->orWhere('title','LIKE',"%{$value}%")
-                ->orWhere('content','LIKE',"%{$value}%");
+        foreach (Str::of($values)->explode(' ') as $value) {
+            $query->orWhere('title', 'LIKE', "%{$value}%")
+                ->orWhere('content', 'LIKE', "%{$value}%");
         };
     }
-
 }
