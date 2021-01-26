@@ -8,8 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/JsonApi/Articles/Adapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Articles/Adapter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/JsonApi/Articles/Schema.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Articles/Schema.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/JsonApi/Articles/Validators.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Articles/Validators.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Traits/HasUuid.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Traits/HasUuid.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Articles/IncludeAuthors.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Articles/IncludeAuthors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Articles/ListArticleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Articles/ListArticleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,20 +182,20 @@
       <TestRunner class="Tests\Feature\Articles\DeleteArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/DeleteArticlesTest.php" method="authenticated_users_can_delete_their_articles" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="DeleteArticlesTest.authenticates_users_cannot_delete_others_articles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\DeleteArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/DeleteArticlesTest.php" method="authenticates_users_cannot_delete_others_articles" scope="Method" />
+    <configuration name="IncludeAuthors.can_fetch_relates_authors" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\IncludeAuthors" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/IncludeAuthors.php" method="can_fetch_relates_authors" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="IncludeAuthors.can_include_authors" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\Articles\IncludeAuthors" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/IncludeAuthors.php" method="can_include_authors" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ListAuthorsTest.can_fetch_all_authors" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Authors\ListAuthorsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Authors/ListAuthorsTest.php" method="can_fetch_all_authors" scope="Method" />
+    <configuration name="ListArticleTest.can_fetch_all_articles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\ListArticleTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/ListArticleTest.php" method="can_fetch_all_articles" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ListAuthorsTest.can_fetch_single_author" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Authors\ListAuthorsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Authors/ListAuthorsTest.php" method="can_fetch_single_author" scope="Method" />
+    <configuration name="ListArticleTest.can_fetch_single_article" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\ListArticleTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/ListArticleTest.php" method="can_fetch_single_article" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -204,10 +205,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="PHPUnit.IncludeAuthors.can_include_authors" />
+        <item itemvalue="PHPUnit.IncludeAuthors.can_fetch_relates_authors" />
+        <item itemvalue="PHPUnit.ListArticleTest.can_fetch_single_article" />
+        <item itemvalue="PHPUnit.ListArticleTest.can_fetch_all_articles" />
         <item itemvalue="PHPUnit.DeleteArticlesTest.authenticated_users_can_delete_their_articles" />
-        <item itemvalue="PHPUnit.DeleteArticlesTest.authenticates_users_cannot_delete_others_articles" />
-        <item itemvalue="PHPUnit.ListAuthorsTest.can_fetch_single_author" />
-        <item itemvalue="PHPUnit.ListAuthorsTest.can_fetch_all_authors" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +240,7 @@
       <workItem from="1611610261326" duration="461000" />
       <workItem from="1611612151086" duration="3318000" />
       <workItem from="1611615789642" duration="1721000" />
-      <workItem from="1611696030164" duration="1345000" />
+      <workItem from="1611696030164" duration="3294000" />
     </task>
     <servers />
   </component>

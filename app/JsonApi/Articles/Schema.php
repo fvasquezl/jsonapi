@@ -34,8 +34,8 @@ class Schema extends SchemaProvider
             'title' => $article->title,
             'slug' => $article->slug,
             'content' => $article->content,
-            'createdAt' => $article->created_at,
-            'updatedAt' => $article->updated_at,
+            'createdAt' => $article->created_at->toAtomString(),
+            'updatedAt' => $article->updated_at->toAtomString(),
         ];
     }
 
@@ -44,7 +44,10 @@ class Schema extends SchemaProvider
     {
         return [
             'authors' => [
-                'data' => function() use ($article){
+                self::SHOW_RELATED =>true,
+                self::SHOW_SELF => true,
+                self::SHOW_DATA =>isset($includeRelationships['authors']),
+                self::DATA => function() use ($article){
                     return $article->user;
                 }
             ]

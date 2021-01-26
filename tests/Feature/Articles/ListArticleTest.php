@@ -16,7 +16,7 @@ class ListArticleTest extends TestCase
         $article = Article::factory()->create();
 
         $response = $this->jsonApi()->get(route('api.v1.articles.read', $article));
-        $response->assertExactJson([
+        $response->assertJson([
             'data' => [
                 'type' => 'articles',
                 'id' => (string)$article->getRouteKey(),
@@ -24,14 +24,18 @@ class ListArticleTest extends TestCase
                     'title' => $article->title,
                     'slug' => $article->slug,
                     'content' => $article->content,
-                    'createdAt' => $article->created_at,
-                    'updatedAt' => $article->updated_at,
+                    'createdAt' => $article->created_at->toAtomString(),
+                    'updatedAt' => $article->updated_at->toAtomString(),
                 ],
                 'links' => [
                     'self' => route('api.v1.articles.read', $article)
                 ]
             ]
         ]);
+        $this->assertNull(
+            $response->json('data.relationships.authors.data'),
+            "The key 'data.relationships.authors.data' must be null"
+        );
     }
 
     /** @test */
@@ -40,7 +44,7 @@ class ListArticleTest extends TestCase
         $article = Article::factory()->times(3)->create();
 
         $response = $this->jsonApi()->get(route('api.v1.articles.index'));
-        $response->assertJsonFragment([
+        $response->assertJson([
             'data' => [
                 [
                     'type' => 'articles',
@@ -49,8 +53,8 @@ class ListArticleTest extends TestCase
                         'title' => $article[0]->title,
                         'slug' => $article[0]->slug,
                         'content' => $article[0]->content,
-                        'createdAt' => $article[0]->created_at,
-                        'updatedAt' => $article[0]->updated_at,
+                        'createdAt' => $article[0]->created_at->toAtomString(),
+                        'updatedAt' => $article[0]->updated_at->toAtomString(),
                     ],
                     'links' => [
                         'self' => route('api.v1.articles.read', $article[0])
@@ -63,8 +67,8 @@ class ListArticleTest extends TestCase
                         'title' => $article[1]->title,
                         'slug' => $article[1]->slug,
                         'content' => $article[1]->content,
-                        'createdAt' => $article[1]->created_at,
-                        'updatedAt' => $article[1]->updated_at,
+                        'createdAt' => $article[1]->created_at->toAtomString(),
+                        'updatedAt' => $article[1]->updated_at->toAtomString(),
                     ],
                     'links' => [
                         'self' => route('api.v1.articles.read', $article[1])
@@ -77,8 +81,8 @@ class ListArticleTest extends TestCase
                         'title' => $article[2]->title,
                         'slug' => $article[2]->slug,
                         'content' => $article[2]->content,
-                        'createdAt' => $article[2]->created_at,
-                        'updatedAt' => $article[2]->updated_at,
+                        'createdAt' => $article[2]->created_at->toAtomString(),
+                        'updatedAt' => $article[2]->updated_at->toAtomString(),
                     ],
                     'links' => [
                         'self' => route('api.v1.articles.read', $article[2])
