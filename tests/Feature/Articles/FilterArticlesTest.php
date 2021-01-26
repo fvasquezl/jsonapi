@@ -75,18 +75,18 @@ class FilterArticlesTest extends TestCase
     {
         Article::factory()->create([
             'title' => 'Article from february',
-            'created_at' => now()->month(2)
+            'created_at' => now()->month(3)
         ]);
         Article::factory()->create([
             'title' => 'An other article from february',
-            'created_at' => now()->month(2)
+            'created_at' => now()->month(3)
         ]);
         Article::factory()->create([
             'title' => 'Article from January',
             'created_at' => now()->month(1)
         ]);
 
-        $url = route('api.v1.articles.index', ['filter[month]' => 2]);
+        $url = route('api.v1.articles.index', ['filter[month]' => 3]);
 
         $this->jsonApi()->get($url)
             ->assertJsonCount(2, 'data')

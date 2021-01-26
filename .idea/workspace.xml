@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f977079c-1f0c-4e70-9e9d-0045fdd4ec5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/JsonApi/Articles/Adapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Articles/Adapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/JsonApi/Articles/Schema.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Articles/Schema.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Articles/IncludeAuthors.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Articles/IncludeAuthors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Articles/ListArticleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Articles/ListArticleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,9 +174,9 @@
       <recent name="$PROJECT_DIR$/tests/Feature/Articles" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.IncludeAuthors.can_include_authors">
-    <configuration name="DeleteArticlesTest.authenticated_users_can_delete_their_articles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\DeleteArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/DeleteArticlesTest.php" method="authenticated_users_can_delete_their_articles" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.FilterArticlesTest.can_filter_articles_by_month">
+    <configuration name="FilterArticlesTest.can_filter_articles_by_month" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\FilterArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/FilterArticlesTest.php" method="can_filter_articles_by_month" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="IncludeAuthors.can_fetch_relates_authors" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -204,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.FilterArticlesTest.can_filter_articles_by_month" />
         <item itemvalue="PHPUnit.IncludeAuthors.can_include_authors" />
         <item itemvalue="PHPUnit.IncludeAuthors.can_fetch_relates_authors" />
         <item itemvalue="PHPUnit.ListArticleTest.can_fetch_single_article" />
         <item itemvalue="PHPUnit.ListArticleTest.can_fetch_all_articles" />
-        <item itemvalue="PHPUnit.DeleteArticlesTest.authenticated_users_can_delete_their_articles" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +237,7 @@
       <workItem from="1611610261326" duration="461000" />
       <workItem from="1611612151086" duration="3318000" />
       <workItem from="1611615789642" duration="1721000" />
-      <workItem from="1611696030164" duration="3294000" />
+      <workItem from="1611696030164" duration="3924000" />
     </task>
     <servers />
   </component>
