@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f977079c-1f0c-4e70-9e9d-0045fdd4ec5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/JsonApi/Articles/Validators.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Articles/Validators.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/Slug.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/Slug.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Articles/CreateArticlesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Articles/CreateArticlesTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Articles/PaginateArticlesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Articles/PaginateArticlesTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,25 +172,25 @@
       <recent name="$PROJECT_DIR$/tests/Feature/Articles" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.UpdateArticlesTest.can_update_the_slug_only">
-    <configuration name="CreateArticlesTest.authenticated_users_can_create_articles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\CreateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/CreateArticlesTest.php" method="authenticated_users_can_create_articles" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.DeleteArticlesTest.authenticated_users_can_delete_their_articles">
+    <configuration name="DeleteArticlesTest.authenticated_users_can_delete_their_articles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\DeleteArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/DeleteArticlesTest.php" method="authenticated_users_can_delete_their_articles" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="CreateArticlesTest.slug_must_only_contain_letters_numbers_and_dashes" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\CreateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/CreateArticlesTest.php" method="slug_must_only_contain_letters_numbers_and_dashes" scope="Method" />
+    <configuration name="DeleteArticlesTest.authenticates_users_can_delete_their_articles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\DeleteArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/DeleteArticlesTest.php" method="authenticates_users_can_delete_their_articles" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UpdateArticlesTest.authenticated_users_can_update_articles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\UpdateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" method="authenticated_users_can_update_articles" scope="Method" />
+    <configuration name="DeleteArticlesTest.authenticates_users_cannot_delete_others_articles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\DeleteArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/DeleteArticlesTest.php" method="authenticates_users_cannot_delete_others_articles" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UpdateArticlesTest.can_update_the_slug_only" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\UpdateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" method="can_update_the_slug_only" scope="Method" />
+    <configuration name="DeleteArticlesTest.guest_cannot_delete_articles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\DeleteArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/DeleteArticlesTest.php" method="guest_cannot_delete_articles" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UpdateArticlesTest.can_update_the_title_only" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\UpdateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" method="can_update_the_title_only" scope="Method" />
+    <configuration name="UpdateArticlesTest.authenticated_users_cannot_update_others_articles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\UpdateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" method="authenticated_users_cannot_update_others_articles" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -202,11 +199,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.UpdateArticlesTest.can_update_the_slug_only" />
-        <item itemvalue="PHPUnit.UpdateArticlesTest.can_update_the_title_only" />
-        <item itemvalue="PHPUnit.UpdateArticlesTest.authenticated_users_can_update_articles" />
-        <item itemvalue="PHPUnit.CreateArticlesTest.authenticated_users_can_create_articles" />
-        <item itemvalue="PHPUnit.CreateArticlesTest.slug_must_only_contain_letters_numbers_and_dashes" />
+        <item itemvalue="PHPUnit.DeleteArticlesTest.authenticated_users_can_delete_their_articles" />
+        <item itemvalue="PHPUnit.DeleteArticlesTest.authenticates_users_cannot_delete_others_articles" />
+        <item itemvalue="PHPUnit.DeleteArticlesTest.authenticates_users_can_delete_their_articles" />
+        <item itemvalue="PHPUnit.DeleteArticlesTest.guest_cannot_delete_articles" />
+        <item itemvalue="PHPUnit.UpdateArticlesTest.authenticated_users_cannot_update_others_articles" />
       </list>
     </recent_temporary>
   </component>
