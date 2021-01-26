@@ -15,7 +15,9 @@ class PaginateArticlesTest extends TestCase
     {
         Article::factory()->times(10)->create();
         $url = route('api.v1.articles.index', ['page[size]' => 2, 'page[number]' => 3]);
+
         $response = $this->jsonApi()->get($url);
+
         $response->assertJsonStructure([
             'links' => ['first', 'last', 'prev', 'next']
         ]);

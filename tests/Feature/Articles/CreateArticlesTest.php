@@ -32,7 +32,6 @@ class CreateArticlesTest extends TestCase
 
         $article = array_filter(Article::factory()->raw(['user_id' => null]));
 
-
         $this->assertDatabaseMissing('articles', $article);
 
         Sanctum::actingAs($user);
