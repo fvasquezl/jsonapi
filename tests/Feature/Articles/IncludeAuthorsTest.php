@@ -7,7 +7,7 @@ use App\Models\Article;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class IncludeAuthors extends TestCase
+class IncludeAuthorsTest extends TestCase
 {
 
     use RefreshDatabase;
