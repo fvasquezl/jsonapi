@@ -6,10 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="f977079c-1f0c-4e70-9e9d-0045fdd4ec5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/json-api-v1.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/json-api-v1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/JsonApi/Articles/Adapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Articles/Adapter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/JsonApi/Articles/Schema.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Articles/Schema.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/JsonApi/Articles/Validators.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Articles/Validators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/JsonApi/Authors/Adapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Authors/Adapter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/JsonApi/Authors/Schema.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Authors/Schema.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/JsonApi/Authors/Validators.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Authors/Validators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/JsonApi/Categories/Adapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Categories/Adapter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/JsonApi/Categories/Schema.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Categories/Schema.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/JsonApi/Categories/Validators.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Categories/Validators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Articles/IncludeAuthors.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Articles/IncludeAuthorsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Articles/FilterArticlesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Articles/FilterArticlesTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,25 +185,25 @@
       <recent name="$PROJECT_DIR$/tests/Feature/Articles" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.DeleteCategoriesTest.authenticates_users_cannot_delete_others_categories">
-    <configuration name="DeleteArticlesTest.authenticates_users_cannot_delete_others_articles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\DeleteArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/DeleteArticlesTest.php" method="authenticates_users_cannot_delete_others_articles" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.FilterArticlesTest.can_filter_articles_by_multiple_categories">
+    <configuration name="CreateArticlesTest.title_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\CreateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/CreateArticlesTest.php" method="title_is_required" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="DeleteCategoriesTest.authenticated_users_can_delete_their_categories" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Categories\DeleteCategoriesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Categories/DeleteCategoriesTest.php" method="authenticated_users_can_delete_their_categories" scope="Method" />
+    <configuration name="FilterArticlesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\FilterArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/FilterArticlesTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="DeleteCategoriesTest.authenticates_users_cannot_delete_others_categories" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Categories\DeleteCategoriesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Categories/DeleteCategoriesTest.php" method="authenticates_users_cannot_delete_others_categories" scope="Method" />
+    <configuration name="FilterArticlesTest.can_filter_articles_by_categories" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\FilterArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/FilterArticlesTest.php" method="can_filter_articles_by_categories" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="DeleteCategoriesTest.guest_cannot_delete_categories" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Categories\DeleteCategoriesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Categories/DeleteCategoriesTest.php" method="guest_cannot_delete_categories" scope="Method" />
+    <configuration name="FilterArticlesTest.can_filter_articles_by_multiple_categories" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\FilterArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/FilterArticlesTest.php" method="can_filter_articles_by_multiple_categories" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UpdateCategoriesTest.can_update_the_slug_only" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Categories\UpdateCategoriesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Categories/UpdateCategoriesTest.php" method="can_update_the_slug_only" scope="Method" />
+    <configuration name="FilterArticlesTest.can_filter_articles_by_title" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\FilterArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/FilterArticlesTest.php" method="can_filter_articles_by_title" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -203,11 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.DeleteCategoriesTest.authenticates_users_cannot_delete_others_categories" />
-        <item itemvalue="PHPUnit.DeleteCategoriesTest.authenticated_users_can_delete_their_categories" />
-        <item itemvalue="PHPUnit.DeleteCategoriesTest.guest_cannot_delete_categories" />
-        <item itemvalue="PHPUnit.DeleteArticlesTest.authenticates_users_cannot_delete_others_articles" />
-        <item itemvalue="PHPUnit.UpdateCategoriesTest.can_update_the_slug_only" />
+        <item itemvalue="PHPUnit.FilterArticlesTest.can_filter_articles_by_multiple_categories" />
+        <item itemvalue="PHPUnit.FilterArticlesTest.can_filter_articles_by_categories" />
+        <item itemvalue="PHPUnit.FilterArticlesTest" />
+        <item itemvalue="PHPUnit.FilterArticlesTest.can_filter_articles_by_title" />
+        <item itemvalue="PHPUnit.CreateArticlesTest.title_is_required" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +248,7 @@
       <workItem from="1611610261326" duration="461000" />
       <workItem from="1611612151086" duration="3318000" />
       <workItem from="1611615789642" duration="1721000" />
-      <workItem from="1611696030164" duration="8248000" />
+      <workItem from="1611696030164" duration="12558000" />
     </task>
     <servers />
   </component>

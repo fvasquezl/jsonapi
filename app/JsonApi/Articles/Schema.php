@@ -20,7 +20,7 @@ class Schema extends SchemaProvider
      */
     public function getId($resource)
     {
-        return (string) $resource->getRouteKey();
+        return (string)$resource->getRouteKey();
     }
 
     /**
@@ -44,11 +44,19 @@ class Schema extends SchemaProvider
     {
         return [
             'authors' => [
-                self::SHOW_RELATED =>true,
+                self::SHOW_RELATED => true,
                 self::SHOW_SELF => true,
-                self::SHOW_DATA =>isset($includeRelationships['authors']),
-                self::DATA => function() use ($article){
+                self::SHOW_DATA => isset($includeRelationships['authors']),
+                self::DATA => function () use ($article) {
                     return $article->user;
+                }
+            ],
+            'categories' => [
+                self::SHOW_RELATED => true,
+                self::SHOW_SELF => true,
+                self::SHOW_DATA => isset($includeRelationships['categories']),
+                self::DATA => function () use ($article) {
+                    return $article->category;
                 }
             ]
         ];
