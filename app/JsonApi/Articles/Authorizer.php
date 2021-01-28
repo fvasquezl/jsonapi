@@ -39,9 +39,10 @@ class Authorizer extends AbstractAuthorizer
      */
     public function create($type, $request)
     {
-
-       $this->can('create',$type,$request);
-
+        $this->authenticate();
+        if($request->has('data.relationships.authors')) {
+            $this->authorize('create',[ $type, $request]);
+        }
     }
 
     /**
@@ -91,5 +92,10 @@ class Authorizer extends AbstractAuthorizer
     public function delete($article, $request)
     {
         $this->can('delete',$article);
+    }
+
+    public function modifyRelationship($record, $field, $request)
+    {
+       $this->can('modifyCategories',$record,$request);
     }
 }
