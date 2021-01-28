@@ -6,10 +6,12 @@ use CloudCreativity\LaravelJsonApi\Auth\AbstractAuthorizer;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class Authorizer extends AbstractAuthorizer
 {
     protected $guards = ['sanctum'];
+
     /**
      * Authorize a resource index request.
      *
@@ -40,8 +42,8 @@ class Authorizer extends AbstractAuthorizer
     public function create($type, $request)
     {
         $this->authenticate();
-        if($request->has('data.relationships.authors')) {
-            $this->authorize('create',[ $type, $request]);
+        if ($request->has('data.relationships.authors')) {
+            $this->authorize('create', [$type, $request]);
         }
     }
 
@@ -75,7 +77,7 @@ class Authorizer extends AbstractAuthorizer
     public function update($article, $request)
     {
 
-       $this->can('update',$article);
+        $this->can('update', $article);
     }
 
     /**
@@ -91,11 +93,12 @@ class Authorizer extends AbstractAuthorizer
      */
     public function delete($article, $request)
     {
-        $this->can('delete',$article);
+        $this->can('delete', $article);
     }
 
     public function modifyRelationship($record, $field, $request)
     {
-       $this->can('modifyCategories',$record,$request);
+        $ability = Str::camel('modify-' . $field);
+        $this->can($ability, $record, $request);
     }
 }

@@ -198,7 +198,7 @@ class UpdateArticlesTest extends TestCase
        $article = Article::factory()->create();
        $author = User::factory()->create();
 
-       Sanctum::actingAs($article->user,['articles:modify-categories']);
+       Sanctum::actingAs($article->user,['articles:modify-authors']);
 
        $this->jsonApi()
            ->withData([

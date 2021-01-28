@@ -9,8 +9,6 @@
       <change beforePath="$PROJECT_DIR$/app/JsonApi/Articles/Authorizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Articles/Authorizer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Policies/ArticlePolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/ArticlePolicy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Articles/CreateArticlesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Articles/CreateArticlesTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Articles/DeleteArticlesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Articles/DeleteArticlesTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +176,7 @@
       <recent name="$PROJECT_DIR$/tests/Feature/Articles" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.UpdateArticlesTest.can_replace_the_categories">
+  <component name="RunManager" selected="PHPUnit.UpdateArticlesTest.can_replace_the_authors">
     <configuration name="CreateArticlesTest.authenticated_users_cannot_create_articles_on_behalf_of_another_user" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\Articles\CreateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/CreateArticlesTest.php" method="authenticated_users_cannot_create_articles_on_behalf_of_another_user" scope="Method" />
       <method v="2" />
@@ -191,12 +189,12 @@
       <TestRunner class="Tests\Feature\Articles\DeleteArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/DeleteArticlesTest.php" method="authenticated_users_cannot_delete_their_articles_without_permissions" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UpdateArticlesTest.can_replace_the_categories" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\UpdateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" method="can_replace_the_categories" scope="Method" />
+    <configuration name="UpdateArticlesTest.can_replace_the_authors" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\UpdateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" method="can_replace_the_authors" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UpdateArticlesTest.can_update_the_slug_only" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\UpdateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" method="can_update_the_slug_only" scope="Method" />
+    <configuration name="UpdateArticlesTest.can_replace_the_categories" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Articles\UpdateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" method="can_replace_the_categories" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -205,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.UpdateArticlesTest.can_replace_the_authors" />
         <item itemvalue="PHPUnit.UpdateArticlesTest.can_replace_the_categories" />
         <item itemvalue="PHPUnit.CreateArticlesTest.authenticated_users_cannot_create_articles_on_behalf_of_another_user" />
         <item itemvalue="PHPUnit.DeleteArticlesTest.authenticated_users_can_delete_their_articles" />
         <item itemvalue="PHPUnit.DeleteArticlesTest.authenticated_users_cannot_delete_their_articles_without_permissions" />
-        <item itemvalue="PHPUnit.UpdateArticlesTest.can_update_the_slug_only" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +239,7 @@
       <workItem from="1611610261326" duration="461000" />
       <workItem from="1611612151086" duration="3318000" />
       <workItem from="1611615789642" duration="1721000" />
-      <workItem from="1611696030164" duration="20801000" />
+      <workItem from="1611696030164" duration="22529000" />
     </task>
     <servers />
   </component>
