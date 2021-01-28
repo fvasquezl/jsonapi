@@ -3,6 +3,7 @@
 namespace App\JsonApi\Articles;
 
 use App\Rules\Slug;
+use CloudCreativity\LaravelJsonApi\Rules\HasOne;
 use CloudCreativity\LaravelJsonApi\Validation\AbstractValidators;
 use Illuminate\Validation\Rule;
 
@@ -15,7 +16,7 @@ class Validators extends AbstractValidators
      * @var string[]|null
      *      the allowed paths, an empty array for none allowed, or null to allow all paths.
      */
-    protected $allowedIncludePaths = ['authors','categories'];
+    protected $allowedIncludePaths = ['authors', 'categories'];
 
     /**
      * The sort field names a client is allowed send.
@@ -23,7 +24,7 @@ class Validators extends AbstractValidators
      * @var string[]|null
      *      the allowed fields, an empty array for none allowed, or null to allow all fields.
      */
-    protected $allowedSortParameters = ['title','content'];
+    protected $allowedSortParameters = ['title', 'content'];
 
     /**
      * The filters a client is allowed send.
@@ -31,7 +32,7 @@ class Validators extends AbstractValidators
      * @var string[]|null
      *      the allowed filters, an empty array for none allowed, or null to allow all.
      */
-    protected $allowedFilteringParameters = ['title','content','year','month','search','categories'];
+    protected $allowedFilteringParameters = ['title', 'content', 'year', 'month', 'search', 'categories'];
 
     /**
      * Get resource validation rules.
@@ -53,6 +54,14 @@ class Validators extends AbstractValidators
                 Rule::unique('articles')->ignore($record)
             ],
             'content' => ['required'],
+            'categories' => [
+                Rule::requiredIf(! $record),
+                new HasOne('categories')
+            ],
+            'authors' => [
+                Rule::requiredIf(! $record),
+                new HasOne('authors')
+            ],
         ];
     }
 

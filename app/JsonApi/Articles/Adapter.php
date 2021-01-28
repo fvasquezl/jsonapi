@@ -10,7 +10,9 @@ use Illuminate\Support\Collection;
 class Adapter extends AbstractAdapter
 {
 
-    protected $guarded=['id'];
+    protected $fillable=['title','slug','content','categories','authors'];
+
+
 
     protected $includePaths=[
         'authors' => 'user',
@@ -48,12 +50,6 @@ class Adapter extends AbstractAdapter
     protected function filter($query, Collection $filters)
     {
         $this->filterWithScopes($query, $filters);
-    }
-
-    protected function fillAttributes($article, Collection $attributes)
-    {
-        $article->fill($attributes->toArray());
-        $article->user_id = auth()->id();
     }
 
     public function authors()
