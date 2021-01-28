@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f977079c-1f0c-4e70-9e9d-0045fdd4ec5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/JsonApi/Articles/Authorizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/JsonApi/Articles/Authorizer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/ArticlePolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/ArticlePolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,25 +174,25 @@
       <recent name="$PROJECT_DIR$/tests/Feature/Articles" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.UpdateArticlesTest.can_replace_the_authors">
-    <configuration name="CreateArticlesTest.authenticated_users_cannot_create_articles_on_behalf_of_another_user" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\CreateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/CreateArticlesTest.php" method="authenticated_users_cannot_create_articles_on_behalf_of_another_user" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.LoginTest.device_name_is_required">
+    <configuration name="LoginTest.cannot_login_with_invalid_credentials" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Auth\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/LoginTest.php" method="cannot_login_with_invalid_credentials" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="DeleteArticlesTest.authenticated_users_can_delete_their_articles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\DeleteArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/DeleteArticlesTest.php" method="authenticated_users_can_delete_their_articles" scope="Method" />
+    <configuration name="LoginTest.device_name_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Auth\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/LoginTest.php" method="device_name_is_required" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="DeleteArticlesTest.authenticated_users_cannot_delete_their_articles_without_permissions" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\DeleteArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/DeleteArticlesTest.php" method="authenticated_users_cannot_delete_their_articles_without_permissions" scope="Method" />
+    <configuration name="LoginTest.email_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Auth\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/LoginTest.php" method="email_is_required" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UpdateArticlesTest.can_replace_the_authors" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\UpdateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" method="can_replace_the_authors" scope="Method" />
+    <configuration name="LoginTest.email_must_be_valid" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Auth\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/LoginTest.php" method="email_must_be_valid" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UpdateArticlesTest.can_replace_the_categories" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Articles\UpdateArticlesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Articles/UpdateArticlesTest.php" method="can_replace_the_categories" scope="Method" />
+    <configuration name="LoginTest.password_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Auth\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/LoginTest.php" method="password_is_required" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -203,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.UpdateArticlesTest.can_replace_the_authors" />
-        <item itemvalue="PHPUnit.UpdateArticlesTest.can_replace_the_categories" />
-        <item itemvalue="PHPUnit.CreateArticlesTest.authenticated_users_cannot_create_articles_on_behalf_of_another_user" />
-        <item itemvalue="PHPUnit.DeleteArticlesTest.authenticated_users_can_delete_their_articles" />
-        <item itemvalue="PHPUnit.DeleteArticlesTest.authenticated_users_cannot_delete_their_articles_without_permissions" />
+        <item itemvalue="PHPUnit.LoginTest.device_name_is_required" />
+        <item itemvalue="PHPUnit.LoginTest.password_is_required" />
+        <item itemvalue="PHPUnit.LoginTest.email_must_be_valid" />
+        <item itemvalue="PHPUnit.LoginTest.email_is_required" />
+        <item itemvalue="PHPUnit.LoginTest.cannot_login_with_invalid_credentials" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +237,7 @@
       <workItem from="1611610261326" duration="461000" />
       <workItem from="1611612151086" duration="3318000" />
       <workItem from="1611615789642" duration="1721000" />
-      <workItem from="1611696030164" duration="22529000" />
+      <workItem from="1611696030164" duration="26310000" />
     </task>
     <servers />
   </component>
