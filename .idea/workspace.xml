@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f977079c-1f0c-4e70-9e9d-0045fdd4ec5c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Responses/TokenResponse.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Auth/LoginTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Auth/LoginTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,25 +177,25 @@
       <recent name="$PROJECT_DIR$/tests/Feature/Articles" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.LoginTest.device_name_is_required">
-    <configuration name="LoginTest.cannot_login_with_invalid_credentials" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Auth\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/LoginTest.php" method="cannot_login_with_invalid_credentials" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.RegisterTest.device_name_is_required">
+    <configuration name="RegisterTest.device_name_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Auth\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/RegisterTest.php" method="device_name_is_required" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="LoginTest.device_name_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Auth\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/LoginTest.php" method="device_name_is_required" scope="Method" />
+    <configuration name="RegisterTest.email_must_be_unique" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Auth\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/RegisterTest.php" method="email_must_be_unique" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="LoginTest.email_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Auth\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/LoginTest.php" method="email_is_required" scope="Method" />
+    <configuration name="RegisterTest.email_must_be_valid" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Auth\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/RegisterTest.php" method="email_must_be_valid" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="LoginTest.email_must_be_valid" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Auth\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/LoginTest.php" method="email_must_be_valid" scope="Method" />
+    <configuration name="RegisterTest.password_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Auth\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/RegisterTest.php" method="password_is_required" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="LoginTest.password_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Auth\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/LoginTest.php" method="password_is_required" scope="Method" />
+    <configuration name="RegisterTest.password_must_be_confirmed" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Auth\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/RegisterTest.php" method="password_must_be_confirmed" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -201,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.LoginTest.device_name_is_required" />
-        <item itemvalue="PHPUnit.LoginTest.password_is_required" />
-        <item itemvalue="PHPUnit.LoginTest.email_must_be_valid" />
-        <item itemvalue="PHPUnit.LoginTest.email_is_required" />
-        <item itemvalue="PHPUnit.LoginTest.cannot_login_with_invalid_credentials" />
+        <item itemvalue="PHPUnit.RegisterTest.device_name_is_required" />
+        <item itemvalue="PHPUnit.RegisterTest.password_must_be_confirmed" />
+        <item itemvalue="PHPUnit.RegisterTest.password_is_required" />
+        <item itemvalue="PHPUnit.RegisterTest.email_must_be_unique" />
+        <item itemvalue="PHPUnit.RegisterTest.email_must_be_valid" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +240,7 @@
       <workItem from="1611610261326" duration="461000" />
       <workItem from="1611612151086" duration="3318000" />
       <workItem from="1611615789642" duration="1721000" />
-      <workItem from="1611696030164" duration="26310000" />
+      <workItem from="1611696030164" duration="30622000" />
     </task>
     <servers />
   </component>
