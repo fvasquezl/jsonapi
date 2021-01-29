@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f977079c-1f0c-4e70-9e9d-0045fdd4ec5c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Responses/TokenResponse.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Auth/LoginTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Auth/LoginTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Auth/RegisterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Auth/RegisterTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,17 +175,17 @@
       <recent name="$PROJECT_DIR$/tests/Feature/Articles" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.RegisterTest.device_name_is_required">
+  <component name="RunManager" selected="PHPUnit.RegisterTest.cannot_register_twice">
+    <configuration name="AuthenticatedUserTest.can_fetch_the_authenticated_user" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Auth\AuthenticatedUserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/AuthenticatedUserTest.php" method="can_fetch_the_authenticated_user" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RegisterTest.cannot_register_twice" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Auth\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/RegisterTest.php" method="cannot_register_twice" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="RegisterTest.device_name_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\Auth\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/RegisterTest.php" method="device_name_is_required" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RegisterTest.email_must_be_unique" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Auth\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/RegisterTest.php" method="email_must_be_unique" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RegisterTest.email_must_be_valid" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Auth\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Auth/RegisterTest.php" method="email_must_be_valid" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="RegisterTest.password_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -204,11 +202,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.RegisterTest.cannot_register_twice" />
+        <item itemvalue="PHPUnit.AuthenticatedUserTest.can_fetch_the_authenticated_user" />
         <item itemvalue="PHPUnit.RegisterTest.device_name_is_required" />
         <item itemvalue="PHPUnit.RegisterTest.password_must_be_confirmed" />
         <item itemvalue="PHPUnit.RegisterTest.password_is_required" />
-        <item itemvalue="PHPUnit.RegisterTest.email_must_be_unique" />
-        <item itemvalue="PHPUnit.RegisterTest.email_must_be_valid" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +238,7 @@
       <workItem from="1611610261326" duration="461000" />
       <workItem from="1611612151086" duration="3318000" />
       <workItem from="1611615789642" duration="1721000" />
-      <workItem from="1611696030164" duration="30622000" />
+      <workItem from="1611696030164" duration="32444000" />
     </task>
     <servers />
   </component>

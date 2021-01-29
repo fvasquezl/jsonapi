@@ -5,6 +5,7 @@ namespace Tests\Feature\Auth;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Sanctum\PersonalAccessToken;
+use Laravel\Sanctum\Sanctum;
 use Tests\TestCase;
 
 class RegisterTest extends TestCase
@@ -33,6 +34,16 @@ class RegisterTest extends TestCase
            'name' => 'Faustino Vasquez',
            'email' => 'fvasquez@local.com',
        ]);
+    }
+
+
+    /** @test */
+    public function cannot_register_twice()
+    {
+        Sanctum::actingAs(User::factory()->create());
+
+       $this->postJson(route('api.v1.register'))
+           ->assertStatus(204);
     }
 
     /** @test */
