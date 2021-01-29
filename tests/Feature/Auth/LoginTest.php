@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Auth;
 
+use App\Models\Permission;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Sanctum\PersonalAccessToken;
@@ -22,12 +23,44 @@ class LoginTest extends TestCase
             'password' => 'password',
             'device_name' => 'iPhone de ' . $user->name
         ]);
-        $token =$response->json('plain-text-token');
+        $token = $response->json('plain-text-token');
 
         $this->assertNotNull(
             PersonalAccessToken::findToken($token),
             "The plain text token is invalid"
         );
+
+    }
+
+    /** @test */
+    public function user_permissions_are_assigned_as_abilities_to_the_token_response()
+    {
+        $user = User::factory()->create();
+
+        $permission = Permission::factory()->create([
+            'name' => $articlesCreatePermission = 'articles:create'
+        ]);
+        $permission2 = Permission::factory()->create([
+            'name' => $articlesUpdatePermission = 'articles:update'
+        ]);
+
+        $user->givePermissionTo($permission);
+        $user->givePermissionTo($permission2);
+
+        $response = $this->postJson(route('api.v1.login'), [
+            'email' => $user->email,
+            'password' => 'password',
+            'device_name' => 'iPhone de ' . $user->name
+        ]);
+
+
+        $dbToken = PersonalAccessToken::findToken(
+            $response->json('plain-text-token')
+        );
+
+        $this->assertTrue($dbToken->can($articlesCreatePermission));
+        $this->assertTrue($dbToken->can($articlesUpdatePermission));
+        $this->assertFalse($dbToken->can('articles:delete'));
     }
 
 
@@ -38,7 +71,7 @@ class LoginTest extends TestCase
 
         $token = $user->createToken($user->name)->plainTextToken;
 
-        $this->withHeader('Authorization', 'Bearer '.$token)
+        $this->withHeader('Authorization', 'Bearer ' . $token)
             ->postJson(route('api.v1.login'))
             ->assertStatus(204) //empty
         ;
@@ -62,7 +95,7 @@ class LoginTest extends TestCase
             'email' => '',
             'password' => 'wrong-password',
             'device_name' => 'iPhine de Faustino'
-        ])->assertSee(__('validation.required',['attribute'=>'email']))
+        ])->assertSee(__('validation.required', ['attribute' => 'email']))
             ->assertJsonValidationErrors('email');
 
     }
@@ -74,7 +107,7 @@ class LoginTest extends TestCase
             'email' => 'invalid-email',
             'password' => 'wrong-password',
             'device_name' => 'iPhine de Faustino'
-        ])->assertSee(__('validation.email',['attribute'=>'email']))
+        ])->assertSee(__('validation.email', ['attribute' => 'email']))
             ->assertJsonValidationErrors('email');
 
     }
@@ -89,6 +122,7 @@ class LoginTest extends TestCase
         ])->assertJsonValidationErrors('password');
 
     }
+
     /** @test */
     public function device_name_is_required()
     {
